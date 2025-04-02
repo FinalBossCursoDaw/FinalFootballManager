@@ -1,0 +1,68 @@
+body{
+    background-image: url(fondo.png);
+    background-size: cover;
+    overflow: hidden;   
+    background-repeat: no-repeat;
+    
+    
+   
+
+}
+#foto_futbolista{
+  
+        position: absolute; 
+        top: 160px; 
+        left: 370px;
+        width: 1300px;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+}
+#menu_foto{
+    position: absolute;
+    right: -150px; 
+    top: -50px;
+    width: 800px;
+    margin: 0;
+    padding: 0;
+    opacity: 0.7;
+    transition: all 1s;
+}
+#menu_foto:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+#logo {
+    position: relative;
+    left: 1420px;
+    width: 450px;
+    filter:  brightness(1300%); 
+    bottom: 20px;
+}
+#menu-buttons {
+    position: absolute;
+    top: 400px; 
+    left: 1450px; 
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.863);
+    color: rgb(71, 65, 80);
+    border: none;
+    padding: 10px 80px; /* Aumenta el tamaño del padding para hacerlos más largos */
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 400px; /* Aumenta el ancho de los botones */
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgba(92, 92, 92, 0.678);
+    transform: scale(1.1);
+}

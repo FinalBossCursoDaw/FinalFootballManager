@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Football Manager</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img id="foto_futbolista" src="./foto_futbolista.png" alt="foto_futbolista">
+        <div id="menu-container">
+            <img id="menu_foto" src="./menu.png" alt="Menu">
+            <img id="logo" src="./logo.png" alt="foto_logo">
+        </div>
+        <div id="menu-buttons">
+            <button id="btn1">Nueva Partida</button>
+            <button id="btn2">Cargar Partida</button>
+            <button id="btn3">Ajustes</button>
+        </div>
+
+        <!-- Sonidos -->
+        <audio id="menu-sound" src="./sonido_menu.wav" preload="auto" onerror="alert('Error al cargar el sonido')"></audio>
+        <audio id="click-sound" src="efecto_boton.mp3" preload="auto"></audio>
+
+        <script>
+            // Obtener el sonido del menú
+            const menuSound = document.getElementById('menu-sound');
+
+            // Obtener el sonido de clic para los botones
+            const clickSound = document.getElementById('click-sound');
+
+            // Obtener el elemento del menú
+            const menuFoto = document.getElementById('menu_foto');
+            // Reproducir el sonido del menú cuando se hace clic en la imagen del menú
+            menuFoto.addEventListener('click', function() {
+                menuSound.play();  // Reproduce el sonido del menú al hacer clic en el menú
+            });
+
+            // Obtener los botones
+            const buttons = document.querySelectorAll('#menu-buttons button');
+
+            // Añadir evento de clic a cada botón
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    clickSound.play(); // Reproduce el sonido al hacer clic en los botones
+                });
+            });
+        </script>
+    </body>
+</html>
